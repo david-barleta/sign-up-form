@@ -7,6 +7,7 @@
   <title>Sign-up Form</title>
   <link rel="stylesheet" href="css-reset.css">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="./index.js"></script>
 </head>
 <body>
   <section id="sidebar">
@@ -16,18 +17,18 @@
   <main id="sign-up-section">
     <p>Keep track of your productivity and see how you can improve. Start taking control of your day to achieve your goals.</p>
     <p>Sign up now to <em>get started</em>.</p>
-    <form action="">
+    <form action="https://httpbin.org/post" method="post">
 
       <fieldset id="name">
         
         <div>
           <label for="first-name">First Name</label>
-          <input type="text" id="first-name" name="first_name">
+          <input type="text" id="first-name" name="first_name" required>
         </div>
 
         <div>
           <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" name="last_name">
+          <input type="text" id="last-name" name="last_name" required>
         </div>
 
       </fieldset>
@@ -36,12 +37,12 @@
 
         <div>
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email">
+          <input type="email" id="email" name="email" required>
         </div>
 
         <div>
           <label for="number">Phone Number</label>
-          <input type="tel" id="number" name="phone_number">
+          <input type="tel" id="number" name="phone_number" required>
         </div>
 
       </fieldset>
@@ -50,12 +51,12 @@
 
         <div>
           <label for="password">Password</label>
-          <input type="password" id="password" name="password">
+          <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*\d).{12,}$" required>
         </div>
 
         <div>
-          <label for="password">Confirm Password</label>
-          <input type="password" id="password" name="password">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm_password" pattern="^(?=.*[A-Z])(?=.*\d).{12,}$" required>
         </div>
 
       </fieldset>

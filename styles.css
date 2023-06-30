@@ -4,6 +4,8 @@
   --bg-color: #ece6e6;
   --input-bg-color: #ffffff;
   --input-border-color: #c6cbcf;
+  --valid-color: #71bc68;
+  --invalid-color: #b22b27;
 }
 
 body {
@@ -67,6 +69,20 @@ form input {
   margin-top: 3px;
 }
 
+input:focus {
+  outline: none;
+  border-color: #1c1c1e;
+  box-shadow: 0 0 5px #1c1c1e6b;
+}
+
+input:valid {
+  border-color: var(--valid-color);
+}
+
+.error.error {
+  border-color: var(--invalid-color);
+}
+
 button {
   width: 150px;
   color: #FFFFFF;
@@ -82,4 +98,3 @@ main > div:last-child {
   font-family: 'Montserrat';
   font-weight: 500;
 }
-
