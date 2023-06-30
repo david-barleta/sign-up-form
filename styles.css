@@ -10,8 +10,13 @@
 
 body {
   display: grid;
-  grid-template-columns: minmax(min-content, 1fr) 2fr;
+  grid-template-columns: 1fr 2fr;
   background-color: var(--bg-color);
+}
+
+#sidebar {
+  position: relative;
+  display: inline-block;
 }
 
 #sidebar img {
@@ -19,9 +24,11 @@ body {
 }
 
 #sidebar div {
-  position: fixed;
-  bottom: 125px;
-  left: 75px;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 175%);
+  z-index: 1;
   font-family: 'Libre Baskerville';
   font-size: 5rem;
   color: white;
