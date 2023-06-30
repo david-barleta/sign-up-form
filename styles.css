@@ -6,6 +6,7 @@
   --input-border-color: #c6cbcf;
   --valid-color: #71bc68;
   --invalid-color: #b22b27;
+  --black-color: #1c1c1e;
 }
 
 body {
@@ -31,7 +32,7 @@ body {
   z-index: 1;
   font-family: 'Libre Baskerville';
   font-size: 5rem;
-  color: white;
+  color: var(--input-bg-color);
 }
 
 #sign-up-section {
@@ -78,7 +79,7 @@ form input {
 
 input:focus {
   outline: none;
-  border-color: #1c1c1e;
+  border-color: var(--black-color);
   box-shadow: 0 0 5px #1c1c1e6b;
 }
 
@@ -92,8 +93,8 @@ input:valid {
 
 button {
   width: 150px;
-  color: #FFFFFF;
-  background-color: #1c1c1e;
+  color: var(--input-bg-color);
+  background-color: var(--black-color);
   border: none;
   border-radius: 10px;
   padding: 10px;
@@ -104,4 +105,8 @@ button {
 main > div:last-child {
   font-family: 'Montserrat';
   font-weight: 500;
+}
+
+a {
+  color: var(--black-color);
 }
